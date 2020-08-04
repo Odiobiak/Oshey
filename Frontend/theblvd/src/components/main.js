@@ -2,9 +2,10 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
-import set from "./set.jpg";
-import til from "./til.png";
+import set from "./static/set.jpg";
+import til from "./static/til.png";
 import Button from "@material-ui/core/Button";
+import tailor from "./static/tailor.png";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -12,7 +13,12 @@ const useStyles = makeStyles((theme) => ({
   },
 
   button: {
-    margin: theme.spacing(3),
+    margin: theme.spacing(5),
+    height: "8vh",
+    marginTop: theme.spacing(3),
+    padding: theme.spacing(2),
+    textAlign: "center",
+    position: "relative",
   },
 
   paper: {
@@ -58,7 +64,7 @@ export default function CenteredGrid() {
           variant="contained"
           className={classes.button}
         >
-          tailor{" "}
+          Designer{" "}
         </Button>
 
         <Button
@@ -66,7 +72,7 @@ export default function CenteredGrid() {
           variant="contained"
           className={classes.button}
         >
-          tailor{" "}
+          Hair-Extention{" "}
         </Button>
 
         <Button
@@ -74,7 +80,7 @@ export default function CenteredGrid() {
           variant="contained"
           className={classes.button}
         >
-          tailor{" "}
+          Make-up Artist{" "}
         </Button>
 
         <Button
@@ -82,7 +88,7 @@ export default function CenteredGrid() {
           variant="contained"
           className={classes.button}
         >
-          tailor{" "}
+          and More...{" "}
         </Button>
       </div>
     </div>
