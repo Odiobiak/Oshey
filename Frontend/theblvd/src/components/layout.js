@@ -6,6 +6,8 @@ import TypoGraphy from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import InputBase from "@material-ui/core/InputBase";
 import SearchIcon from "@material-ui/icons/Search";
+import Grid from "@material-ui/core/Grid";
+import set from "./static/set.jpg";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -16,6 +18,18 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     alignItems: "left",
     display: "flex",
+  },
+
+  image: {
+    backgroundImage: `url(${set})`,
+    backgroundRepeat: "no-repeat",
+    backgroundColor:
+      theme.palette.type === "light"
+        ? theme.palette.grey[50]
+        : theme.palette.grey[900],
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    height: "80vh",
   },
 
   search: {
@@ -93,6 +107,12 @@ export default function ButtonAppBar() {
           </div>
         </Toolbar>
       </AppBar>
+
+      <div>
+        <Grid container spacing={3} className={classes.image}>
+          <Grid item xs={12}></Grid>
+        </Grid>
+      </div>
     </div>
   );
 }
