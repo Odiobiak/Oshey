@@ -8,6 +8,9 @@ import InputBase from "@material-ui/core/InputBase";
 import SearchIcon from "@material-ui/icons/Search";
 import Grid from "@material-ui/core/Grid";
 import set from "./static/set.jpg";
+import Main from "./main";
+import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
+import Beauty from "../pages/beauty";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -16,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
 
   title: {
     flexGrow: 1,
-    alignItems: "left",
+    alignItems: "center",
     display: "flex",
   },
 
@@ -84,7 +87,9 @@ export default function ButtonAppBar() {
       <AppBar color="primary" position="static">
         <Toolbar>
           <TypoGraphy variant="h6" className={classes.title}>
-            <Button color="inherit">theBLVD</Button>
+            <Button color="inherit">
+              <h1>Thanks!</h1>
+            </Button>
           </TypoGraphy>
 
           <Button color="inherit">Business Owners</Button>
@@ -112,6 +117,10 @@ export default function ButtonAppBar() {
         <Grid container spacing={3} className={classes.image}>
           <Grid item xs={12}></Grid>
         </Grid>
+      </div>
+
+      <div>
+        <Main></Main>
       </div>
     </div>
   );
