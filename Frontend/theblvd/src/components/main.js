@@ -18,6 +18,7 @@ import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import ButtonGroup from "@material-ui/core/ButtonGroup";
 import { Link } from "react-router-dom";
+import Footer from "./footer";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -141,6 +142,7 @@ export default function Main() {
           </Link>
         </div>
       </ButtonGroup>
+
       <div>
         <Typography
           className={"MuiTypography--heading"}
@@ -150,6 +152,7 @@ export default function Main() {
           Types of Services{" "}
         </Typography>
       </div>
+
       <Fragment>
         <Grid container spacing={3} alignItems="center" justify="center">
           <Grid item md={2} className={classes.root}>
@@ -241,6 +244,7 @@ export default function Main() {
           </Grid>
         </Grid>
       </Fragment>
+
       <Fragment>
         <Grid container spacing={3} alignItems="center" justify="center">
           <Grid item md={2} className={classes.root}>
@@ -331,7 +335,11 @@ export default function Main() {
             </Card>{" "}
           </Grid>
         </Grid>
-      </Fragment>{" "}
+      </Fragment>
+
+      <div>
+        <Footer></Footer>
+      </div>
     </div>
   );
 }
