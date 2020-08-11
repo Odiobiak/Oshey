@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
         : theme.palette.grey[900],
     backgroundSize: "cover",
     backgroundPosition: "center",
-    height: "80vh",
+    height: "90vh",
   },
 
   search: {
@@ -114,7 +114,7 @@ export default function ButtonAppBar() {
       </AppBar>
 
       <div>
-        <Grid container spacing={3} className={classes.image}>
+        <Grid className={classes.image}>
           <Grid item xs={12}></Grid>
         </Grid>
       </div>
