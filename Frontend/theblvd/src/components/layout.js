@@ -11,10 +11,15 @@ import set from "./static/set.jpg";
 import Main from "./main";
 import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
 import Beauty from "../pages/beauty";
+import { ButtonGroup } from "@material-ui/core";
+import Container from "@material-ui/core/Container";
+import Box from "@material-ui/core/Box";
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
+    color: "slategray",
+    backgroundColor: "turquoise",
   },
 
   title: {
@@ -82,19 +87,21 @@ export default function ButtonAppBar() {
   const classes = useStyles();
 
   return (
-    <div className="classes.root">
+    <div>
       {/**Using materia-ui to create the header! */}
-      <AppBar color="primary" position="static">
+      <AppBar className={classes.root} position="relative">
         <Toolbar>
           <TypoGraphy variant="h6" className={classes.title}>
-            <Button color="inherit">
+            <Button color="inherit" edge="start">
               <h1>Thanks!</h1>
             </Button>
           </TypoGraphy>
 
-          <Button color="inherit">Business Owners</Button>
-          <Button color="inherit">Login</Button>
-          <Button color="inherit">SignUp</Button>
+          <ButtonGroup variant="text" aria-label="text primary button group">
+            <Button color="inherit">Business Owners</Button>
+            <Button color="inherit">Login</Button>
+            <Button color="inherit">SignUp</Button>
+          </ButtonGroup>
 
           {/**Search button! */}
           <div className={classes.search}>

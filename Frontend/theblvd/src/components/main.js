@@ -14,11 +14,16 @@ import ecard from "./static/ecard.jpg";
 import hcard from "./static/hcard.jpg";
 import scard from "./static/scard.jpg";
 import tcard from "./static/tcard.jpg";
+import barbercard from "./static/barbercard.jpeg";
+import nailsalon from "./static/nailsalon.jpg";
+import delivery from "./static/delivery.jpg";
+import hairsalon from "./static/hairsalon.jpg";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import ButtonGroup from "@material-ui/core/ButtonGroup";
 import { Link } from "react-router-dom";
 import Footer from "./footer";
+import Divider from "@material-ui/core/Divider";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -26,13 +31,22 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     border: 0,
     boxShadow: "0 3px 5px 2px rgba(255, 105, 135, .3)",
-
-    background: "ivory",
-
+    backgroundColor: "turquoise",
     alignItems: "center",
     "& > *": {
       margin: theme.spacing(1),
     },
+  },
+
+  title: {
+    flexGrow: 1,
+    background: "white",
+    backgroundColor: theme.palette.background.paper,
+  },
+
+  divide: {
+    width: "100",
+    maxWidth: "360",
   },
 
   button: {
@@ -41,7 +55,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(3),
     padding: theme.spacing(1),
     textAlign: "center",
-    background: "indianred",
+    background: "slategray",
 
     position: "relative",
   },
@@ -49,9 +63,8 @@ const useStyles = makeStyles((theme) => ({
 
 const styles = makeStyles((muiBaseTheme) => ({
   card: {
-    maxWidth: 300,
+    maxWidth: 400,
     margin: "auto",
-    padding: muiBaseTheme.spacing(3),
 
     transition: "0.3s",
     boxShadow: "0 8px 40px -12px rgba(0,0,0,0.3)",
@@ -60,7 +73,7 @@ const styles = makeStyles((muiBaseTheme) => ({
     },
   },
   media: {
-    paddingTop: "56.25%",
+    paddingTop: "90%",
   },
   content: {
     textAlign: "left",
@@ -80,264 +93,210 @@ export default function Main() {
   const cardclass = styles();
 
   return (
-    <div className={classes.root}>
-      <ButtonGroup color="#841584">
-        <div>
-          <Link to="/beauty" style={{ textDecoration: "none" }}>
-            <Button
-              color="primary"
-              variant="contained"
-              className={classes.button}
-            >
-              beauty <img src={beaut} alt="{}" />
-            </Button>
-          </Link>
-        </div>
+    <div>
+      <div className={classes.root}>
+        <ButtonGroup>
+          <div>
+            <Link to="/beauty" style={{ textDecoration: "none" }}>
+              <Button
+                color="primary"
+                variant="contained"
+                className={classes.button}
+              >
+                beauty <img src={beaut} alt="{}" />
+              </Button>
+            </Link>
+          </div>
 
-        <div>
-          <Link to="/tailor" style={{ textDecoration: "none" }}>
-            <Button
-              color="primary"
-              variant="contained"
-              className={classes.button}
-            >
-              tailor <img src={tail} alt="{}" />
-            </Button>
-          </Link>
-        </div>
+          <div>
+            <Link to="/tailor" style={{ textDecoration: "none" }}>
+              <Button
+                color="primary"
+                variant="contained"
+                className={classes.button}
+              >
+                tailor <img src={tail} alt="{}" />
+              </Button>
+            </Link>
+          </div>
 
-        <div>
-          <Link to="/event" style={{ textDecoration: "none" }}>
-            <Button
-              color="primary"
-              variant="contained"
-              className={classes.button}
-            >
-              event <img src={event} alt="{}" />
-            </Button>
-          </Link>
-        </div>
+          <div>
+            <Link to="/event" style={{ textDecoration: "none" }}>
+              <Button
+                color="primary"
+                variant="contained"
+                className={classes.button}
+              >
+                event <img src={event} alt="{}" />
+              </Button>
+            </Link>
+          </div>
 
-        <div>
-          <Link to="/service" style={{ textDecoration: "none" }}>
-            <Button
-              color="primary"
-              variant="contained"
-              className={classes.button}
-            >
-              Home-Service <img src={home} alt="{}" />
-            </Button>
-          </Link>
-        </div>
+          <div>
+            <Link to="/service" style={{ textDecoration: "none" }}>
+              <Button
+                color="primary"
+                variant="contained"
+                className={classes.button}
+              >
+                Home-Service <img src={home} alt="{}" />
+              </Button>
+            </Link>
+          </div>
 
-        <div>
-          <Link to="/more" style={{ textDecoration: "none" }}>
-            <Button
-              color="primary"
-              variant="contained"
-              className={classes.button}
-            >
-              more <img src={more} alt="{}" />
-            </Button>
-          </Link>
-        </div>
-      </ButtonGroup>
+          <div>
+            <Link to="/more" style={{ textDecoration: "none" }}>
+              <Button
+                color="primary"
+                variant="contained"
+                className={classes.button}
+              >
+                more <img src={more} alt="{}" />
+              </Button>
+            </Link>
+          </div>
+        </ButtonGroup>
+      </div>
 
-      <div>
-        <Typography
-          className={"MuiTypography--heading"}
-          variant={"h2"}
-          align="left"
-        >
-          Types of Services{" "}
+      <div className={classes.title}>
+        <Typography variant={"h2"} align="center" gutterBottom>
+          Types of Services
         </Typography>
       </div>
 
-      <Fragment>
-        <Grid container spacing={3} alignItems="center" justify="center">
-          <Grid item md={2} className={classes.root}>
-            <Card className={cardclass.card}>
-              <CardMedia className={cardclass.media} image={bcard} />
-              <CardContent className={classes.content}>
-                <Typography
-                  className={"MuiTypography--heading"}
-                  variant={"h6"}
-                  gutterBottom
-                >
-                  Beauty
-                </Typography>
-                <Typography
-                  className={"MuiTypography--subheading"}
-                  variant={"caption"}
-                >
-                  We are going to learn different kinds of species in nature
-                  that live together to form amazing environment.
-                </Typography>
-              </CardContent>
-            </Card>
-          </Grid>
+      <div className={classes.title}>
+        <Fragment>
+          <Divider variant="fullWidth" />
+          <Grid container spacing={3} alignItems="center" justify="center">
+            <Grid item md={2}>
+              <Card className={cardclass.card}>
+                <CardMedia className={cardclass.media} image={bcard} />
+                <CardContent className={classes.content}>
+                  <Typography
+                    className={"MuiTypography--heading"}
+                    variant={"h6"}
+                    gutterBottom
+                  >
+                    Beauty
+                  </Typography>
+                </CardContent>
+              </Card>
+            </Grid>
 
-          <Grid item md={2} className={classes.root}>
-            <Card className={cardclass.card} xs={3}>
-              <CardMedia className={cardclass.media} image={ecard} />
-              <CardContent className={classes.content}>
-                <Typography
-                  className={"MuiTypography--heading"}
-                  variant={"h6"}
-                  gutterBottom
-                >
-                  Events
-                </Typography>
-                <Typography
-                  className={"MuiTypography--subheading"}
-                  variant={"caption"}
-                >
-                  We are going to learn different kinds of species in nature
-                  that live together to form amazing environment.
-                </Typography>
-              </CardContent>
-            </Card>
-          </Grid>
+            <Grid item md={2}>
+              <Card className={cardclass.card} xs={3}>
+                <CardMedia className={cardclass.media} image={ecard} />
+                <CardContent className={classes.content}>
+                  <Typography
+                    className={"MuiTypography--heading"}
+                    variant={"h6"}
+                    gutterBottom
+                  >
+                    Events
+                  </Typography>
+                </CardContent>
+              </Card>
+            </Grid>
 
-          <Grid item md={2} className={classes.root}>
-            <Card className={cardclass.card}>
-              <CardMedia className={cardclass.media} image={hcard} />
-              <CardContent className={classes.content}>
-                <Typography
-                  className={"MuiTypography--heading"}
-                  variant={"h6"}
-                  gutterBottom
-                >
-                  Home services{" "}
-                </Typography>
-                <Typography
-                  className={"MuiTypography--subheading"}
-                  variant={"caption"}
-                >
-                  We are going to learn different kinds of species in nature
-                  that live together to form amazing environment.
-                </Typography>
-              </CardContent>
-            </Card>
-          </Grid>
+            <Grid item md={2}>
+              <Card className={cardclass.card}>
+                <CardMedia className={cardclass.media} image={hcard} />
+                <CardContent className={classes.content}>
+                  <Typography
+                    className={"MuiTypography--heading"}
+                    variant={"h6"}
+                    gutterBottom
+                  >
+                    Home services{" "}
+                  </Typography>
+                </CardContent>
+              </Card>
+            </Grid>
 
-          <Grid item md={2} className={classes.root}>
-            <Card className={cardclass.card}>
-              <CardMedia className={cardclass.media} image={scard} />
-              <CardContent className={classes.content}>
-                <Typography
-                  className={"MuiTypography--heading"}
-                  variant={"h6"}
-                  gutterBottom
-                >
-                  Technology services
-                </Typography>
-                <Typography
-                  className={"MuiTypography--subheading"}
-                  variant={"caption"}
-                >
-                  We are going to learn different kinds of species in nature
-                  that live together to form amazing environment.
-                </Typography>
-              </CardContent>
-            </Card>{" "}
+            <Grid item md={2}>
+              <Card className={cardclass.card}>
+                <CardMedia className={cardclass.media} image={scard} />
+                <CardContent className={classes.content}>
+                  <Typography
+                    className={"MuiTypography--heading"}
+                    variant={"h6"}
+                    gutterBottom
+                  >
+                    Technology services
+                  </Typography>
+                </CardContent>
+              </Card>{" "}
+            </Grid>
           </Grid>
-        </Grid>
-      </Fragment>
+        </Fragment>
 
-      <Fragment>
-        <Grid container spacing={3} alignItems="center" justify="center">
-          <Grid item md={2} className={classes.root}>
-            <Card className={cardclass.card}>
-              <CardMedia className={cardclass.media} image={tcard} />
-              <CardContent className={classes.content}>
-                <Typography
-                  className={"MuiTypography--heading"}
-                  variant={"h6"}
-                  gutterBottom
-                >
-                  Tailors
-                </Typography>
-                <Typography
-                  className={"MuiTypography--subheading"}
-                  variant={"caption"}
-                >
-                  We are going to learn different kinds of species in nature
-                  that live together to form amazing environment.
-                </Typography>
-              </CardContent>
-            </Card>
-          </Grid>
+        <Fragment>
+          <Grid container spacing={3} alignItems="center" justify="center">
+            <Grid item md={2}>
+              <Card className={cardclass.card}>
+                <CardMedia className={cardclass.media} image={tcard} />
+                <CardContent className={classes.content}>
+                  <Typography
+                    className={"MuiTypography--heading"}
+                    variant={"h6"}
+                    gutterBottom
+                  >
+                    Tailors
+                  </Typography>
+                </CardContent>
+              </Card>
+            </Grid>
 
-          <Grid item md={2} className={classes.root}>
-            <Card className={cardclass.card} xs={3}>
-              <CardMedia className={cardclass.media} />
-              <CardContent className={classes.content}>
-                <Typography
-                  className={"MuiTypography--heading"}
-                  variant={"h6"}
-                  gutterBottom
-                >
-                  Nature Around Us
-                </Typography>
-                <Typography
-                  className={"MuiTypography--subheading"}
-                  variant={"caption"}
-                >
-                  We are going to learn different kinds of species in nature
-                  that live together to form amazing environment.
-                </Typography>
-              </CardContent>
-            </Card>
-          </Grid>
+            <Grid item md={2}>
+              <Card className={cardclass.card} xs={3}>
+                <CardMedia className={cardclass.media} image={barbercard} />
+                <CardContent className={classes.content}>
+                  <Typography
+                    className={"MuiTypography--heading"}
+                    variant={"h6"}
+                    gutterBottom
+                  >
+                    Barber
+                  </Typography>
+                </CardContent>
+              </Card>
+            </Grid>
 
-          <Grid item md={2} className={classes.root}>
-            <Card className={cardclass.card}>
-              <CardMedia className={cardclass.media} />
-              <CardContent className={classes.content}>
-                <Typography
-                  className={"MuiTypography--heading"}
-                  variant={"h6"}
-                  gutterBottom
-                >
-                  Nature Around Us
-                </Typography>
-                <Typography
-                  className={"MuiTypography--subheading"}
-                  variant={"caption"}
-                >
-                  We are going to learn different kinds of species in nature
-                  that live together to form amazing environment.
-                </Typography>
-              </CardContent>
-            </Card>
-          </Grid>
+            <Grid item md={2}>
+              <Card className={cardclass.card}>
+                <CardMedia className={cardclass.media} image={nailsalon} />
+                <CardContent className={classes.content}>
+                  <Typography
+                    className={"MuiTypography--heading"}
+                    variant={"h6"}
+                    gutterBottom
+                  >
+                    Nail Technician{" "}
+                  </Typography>
+                </CardContent>
+              </Card>
+            </Grid>
 
-          <Grid item md={2} className={classes.root}>
-            <Card className={cardclass.card}>
-              <CardMedia className={cardclass.media} />
-              <CardContent className={classes.content}>
-                <Typography
-                  className={"MuiTypography--heading"}
-                  variant={"h6"}
-                  gutterBottom
-                >
-                  Nature Around Us
-                </Typography>
-                <Typography
-                  className={"MuiTypography--subheading"}
-                  variant={"caption"}
-                >
-                  We are going to learn different kinds of species in nature
-                  that live together to form amazing environment.
-                </Typography>
-              </CardContent>
-            </Card>{" "}
+            <Grid item md={2}>
+              <Card className={cardclass.card}>
+                <CardMedia className={cardclass.media} image={delivery} />
+                <CardContent className={classes.content}>
+                  <Typography
+                    className={"MuiTypography--heading"}
+                    variant={"h6"}
+                    gutterBottom
+                  >
+                    delivery
+                  </Typography>
+                </CardContent>
+              </Card>{" "}
+            </Grid>
           </Grid>
-        </Grid>
-      </Fragment>
+        </Fragment>
+      </div>
 
       <div>
+        <Divider light variant="fullWidth" />
         <Footer></Footer>
       </div>
     </div>
