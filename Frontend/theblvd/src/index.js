@@ -9,6 +9,8 @@ import Event from "./pages/event";
 import Service from "./pages/home-services";
 import More from "./pages/more";
 import Tailor from "./pages/tailor";
+import Signup from "./pages/signup";
+import Login from "./pages/login";
 
 {
   /**import * as serviceWorker from "./serviceWorker";*/
@@ -23,6 +25,8 @@ ReactDOM.render(
       <Route exact path="/service" component={Service} />
       <Route exact path="/more" component={More} />
       <Route exact path="/tailor" component={Tailor} />
+      <Route exact path="/signup" component={Signup} />
+      <Route exact path="/login" component={Login} />
     </Switch>
   </BrowserRouter>,
   document.getElementById("root")

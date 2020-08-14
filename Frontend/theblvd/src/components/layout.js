@@ -99,8 +99,18 @@ export default function ButtonAppBar() {
 
           <ButtonGroup variant="text" aria-label="text primary button group">
             <Button color="inherit">Business Owners</Button>
-            <Button color="inherit">Login</Button>
-            <Button color="inherit">SignUp</Button>
+
+            <div>
+              <Link to="/login" style={{ textDecoration: "none" }}>
+                <Button>login</Button>
+              </Link>
+            </div>
+
+            <div>
+              <Link to="/signup" style={{ textDecoration: "none" }}>
+                <Button>signup</Button>
+              </Link>
+            </div>
           </ButtonGroup>
 
           {/**Search button! */}
