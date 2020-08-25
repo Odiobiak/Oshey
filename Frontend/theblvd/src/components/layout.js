@@ -37,7 +37,7 @@ const useStyles = makeStyles((theme) => ({
         : theme.palette.grey[900],
     backgroundSize: "cover",
     backgroundPosition: "center",
-    height: "90vh",
+    height: "80vh",
   },
 
   search: {
